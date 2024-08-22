@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Big Shoulders Display"
+      rel="stylesheet"
+    />
+    <link href="../styles/css/chat.css" rel="stylesheet" />
+    <source src="../styles/img/&fond_blog.png" />
+    <title>DM</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#">
+        <h1 class="logo_title">Z01 FORUM</h1>
+      </a>
+      <ul>
+        <li>
+          <button
+            id="button_username"
+            class="button_user_navbar"
+            type="submit"
+          ></button>
+        </li>
+        <li>
+          <button id="button_exit" type="submit" name="username">
+            <img src="/styles/img/exit.png" id="exit" alt="Exit" />
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="box1">
+        1
+        <div class="membersList">We are the members</div>
+      </div>
+      <div class="box2">
+        2
+        <div class="chatArea">This is the chat area</div>
+      </div>
+      <div class="box3">
+        3
+        <div class="writeArea">
+          <!-- This is where I we write messages -->
+          <textarea
+            name="message"
+            id="messageToSend"
+            class="inputChat"
+            cols="10"
+            rows="1"
+            placeholder="Send a message here...."
+          ></textarea>
+          <button id="sendMsgButton" class="sendMsg">Send</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

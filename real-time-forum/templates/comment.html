@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment part</title>
+  </head>
+  <body>
+    <div class="all_data">
+      <div class="comment_div">
+        <div id="${el.tokenID}" class="modal">
+          <div class="modal_content">
+            <div class="all_comments_and_form">
+              <div class="all_comments">
+                <div class="windox_comment">
+                  <div class="container_info_comment">
+                    <div class="post_comment">
+                      <div class="bandeau_comment">
+                        <form
+                          class="pseudo"
+                          action="/user_public_profile"
+                          method="get"
+                        >
+                          <button
+                            class="bouton_pseudo_post_crées"
+                            name="userpublic"
+                            value="${
+                                el.username
+                              }"
+                            type="submit"
+                          >
+                            ${el.username}
+                          </button>
+                        </form>
+                      </div>
+                      <div class="zone_text_comment">
+                        <textarea
+                          id="textp_comment"
+                          name="message"
+                          cols="100"
+                          rows="10"
+                          disabled
+                        >
+${
+                              el.message_comment
+                            }</textarea
+                        >
+                        ${ el.image_comment ? `<img
+                          class="image_post"
+                          src="${el.image_comment}"
+                        />` : "" }
+                      </div>
+                      <div class="bandeau_button_like_dislike_time_comment">
+                        <div class="date_info_comment">
+                          <label>${new Date( el.date ).toLocaleString()}</label>
+                        </div>
+                        <div class="button_like_and_dislike_comment">
+                          <form action="/commentlike" method="post">
+                            <button
+                              class="button_like"
+                              name="like"
+                              value="${
+                                  el.tokenID
+                                }"
+                              type="submit"
+                            >
+                              <p>${ el.like }</p>
+                              <p>|</p>
+                              J'aime
+                            </button>
+                          </form>
+                          <form action="/commentdislike" method="post">
+                            <button
+                              class="button_dislike"
+                              name="like"
+                              value="${
+                                  el.tokenID
+                                }"
+                              type="submit"
+                            >
+                              <p>${ el.dislike }</p>
+                              <p>|</p>
+                              J'aime pas
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
